@@ -1,6 +1,12 @@
 # dionysus
  - a small code sample using React/Redux
 
+##### Status
+Feature Incomplete. Redux store has data but actions are not being fired and none of the buttons are functional. #codefail
+I assume someone with full working knowledge could get through this in about an hour. It took me 5 plus to pull this off.
+
+I've debugged redux code, and render props have gotten me far, but there are still parts of redux that I'm make me 😭
+
 ##### CSS
 For the dropdowns, I'm using MaterialUI.
 FlexBox only for layout. All styles are in `App.css` minus a few last minute inlines with `style={{foo:bar}}`.

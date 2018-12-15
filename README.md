@@ -46,9 +46,11 @@
 
 
 
-
+## Branch
+action-dispatching
 
 ## Status
+
 Feature Incomplete.
 - actions are not being fired
 - none of the buttons are functional.
@@ -72,7 +74,6 @@ FlexBox only for layout. All styles are in `App.css` minus a few last minute inl
 
 #### Store
 ..the 10 people and the 100 messages taken from 2 `.json` files found in `./json`
-One complication I ran across was having this data spread across 2 objects. My solution was to make them both sibling arrays.
 
 #### Asc/Desc
 - one of those moments where you walk away from the screen for a few and ideas pop in....
@@ -114,17 +115,7 @@ There were a few things that got brought up in phone conversations that I need m
 ---
 
 ## Current War
-- read kabu.
-2 files.
-- I took out the mapping in `List.js` that rendered all of my messages.
-  - I want `List` connected to the store properly.
-  - the last method gets it from props `data` which i defined in `App` as `<List data={store.getState()}/>`
-  - This is not the proper way to use redux. I should have used `MSTP`
-- MSTP on `List` component
-  - done...
 - Dispatching actions....
-
-- i will break off another branch here in case I want to get back to this point.... teardown branch has the List connecting to the redux store.
 
 
 ---

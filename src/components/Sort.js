@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from "react-redux";
 
 import {
   sortAscending,
@@ -13,11 +12,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 
 
- class Sort extends React.Component {
+ export default class Sort extends React.Component {
   render() {
-    const { dispatch } = this.props;
-    console.log(dispatch,'!!!');
-
      return (
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
@@ -33,12 +29,3 @@ import Typography from '@material-ui/core/Typography';
     )
   }
 }
-
-function mapStateToProps(state) {
-  return {
-    ...state
-  };
-}
-const mapDispatchToProps = { sortAscending, sortDescending };
-
-export default connect(mapStateToProps, mapDispatchToProps)(Sort);

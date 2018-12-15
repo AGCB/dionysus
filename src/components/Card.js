@@ -1,13 +1,15 @@
 import React from 'react';
 
-export default function Card(props) {
-  return (
-    <div className="card">
-      <ul>
-        <li>title:{props.title}</li>
-        <li>comment:{props.comment}</li>
-        <li>name:{props.name}</li>
-      </ul>
-    </div>
-  )
+export default class Card extends React.Component {
+  render() {
+    return (
+      <div className="card">
+        <ul>
+          <li>title:{this.props.title}</li>
+          <li>comment:{this.props.comment}</li>
+          <li>name:{this.props.name}</li>
+        </ul>
+      </div>
+    )
+  }
 }

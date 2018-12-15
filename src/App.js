@@ -21,7 +21,7 @@ class App extends Component {
             <Sort />
             <SearchUser />
           </header>
-          <List data={store.getState()}/>
+          <List />
         </div>
       </Provider>
     );

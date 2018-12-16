@@ -1,10 +1,3 @@
-
-
-
-
-//unclear if this is necessary.
-
-//json
 import users from '../json/users.json';
 import posts from '../json/posts.json';
 const userData = {

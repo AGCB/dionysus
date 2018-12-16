@@ -55,7 +55,7 @@ import Card from './Card';
 function mapStateToProps(state) {
   return {
   ...state
-}
+  }
 }
 
 class List extends React.Component {
@@ -65,7 +65,7 @@ class List extends React.Component {
       return x.name;
     })
     return (
-      <div className={this.props.sortascending?"test1":"test2"}>
+      <div className={this.props.sortascending?"ascending-order":"descending-order"}>
         {this.props.posts.map(x => {
           return (
             <Card key={x.id}

@@ -24,9 +24,9 @@ export default function MainReducer(state = userData, action) {
         })
       }
     case 'SEARCH_USER_NAME':
-    console.log('state from case SEARCH_USER_NAME is...', state);
+      console.log('action/state from case SEARCH_USER_NAME is...', action, state);
       return state;
-    default:
-      return state
+      default:
+        return userData;
   }
 }

@@ -55,7 +55,7 @@ searchUser-feature
    <tr>
      <td>✔</td>
      <td>✔</td>
-     <td>needs full work</td>
+     <td>fires action. needs filtering of list</td>
    </tr>
  </table>
 </details>
@@ -105,4 +105,5 @@ searchUser-feature
 
 
 ## Current Focus
-- reading [an article ](https://medium.com/capital-one-tech/how-to-work-with-forms-inputs-and-events-in-react-c337171b923b) about forms/events/input in react
+- submit action is dispatching.
+-

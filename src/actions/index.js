@@ -1,4 +1,3 @@
-// not dispatched yet. 
 import { TOGGLE_ACTIVE,
          TOGGLE_INACTIVE,
          SORT_ASCENDING,
@@ -25,5 +24,5 @@ export const sortDescending = () => ({
 // search userName action
 export const searchUserName = userInput => ({
   type: SEARCH_USER_NAME,
-  userInput
+  userInput: userInput
 })

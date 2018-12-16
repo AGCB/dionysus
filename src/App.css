@@ -40,26 +40,24 @@ header * {
 
 .searchUserName {
   text-align: left;
-  background-color: white;
+  font-size: 18px;
 }
 
-/* ascending order */
-.test1 {
-
+.ascending-order {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 70%;
   margin-left: 10%;
   border: 10px solid darkcyan;
   border-radius: 20px;
   margin-top:20px;
 }
-/* descending order */
-.test2 {
+
+.descending-order {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column-reverse;
   max-width: 70%;
   margin-left: 10%;
@@ -71,7 +69,7 @@ header * {
 button {
   text-align: center;
   padding-right: 45px;
-  margin-right: 200px;
+  margin-right: 100px;
 }
 
 .bullets {

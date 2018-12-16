@@ -13,6 +13,7 @@ export default class Card extends React.Component {
             <span className="bullets">comment: &nbsp;</span>
             {this.props.comment}
           </li>
+          <br></br>
           <li>
             <span className="bullets">name: &nbsp;</span>
             {this.props.name}

@@ -65,13 +65,14 @@ class List extends React.Component {
       return x.name;
     })
     return (
-      <div className="card">
+      <div className={this.props.sortascending?"test1":"test2"}>
         {this.props.posts.map(x => {
           return (
             <Card key={x.id}
                   title={x.title}
                   comment={x.body}
-                  name={users[x.userId-1]}/>
+                  name={users[x.userId-1]}
+                  className="card"/>
           )
         })}
       </div>

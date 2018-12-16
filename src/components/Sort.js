@@ -1,10 +1,5 @@
 import React from 'react'
-
-import {
-  sortAscending,
-  sortDescending,
-} from '../actions/index';
-
+import '../App.css';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -14,18 +9,22 @@ import Typography from '@material-ui/core/Typography';
 
  export default class Sort extends React.Component {
   render() {
+    const { sortByASC, sortByDESC } = this.props;
      return (
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography style={{marginLeft: "30px"}} >Sort</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            <button onClick={sortAscending}>ASC</button>
-            <button onClick={sortDescending}>DESC</button>
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+       <div>
+         <ExpansionPanel>
+           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+             <Typography style={{marginLeft: "30px"}}>Sort</Typography>
+           </ExpansionPanelSummary>
+           <ExpansionPanelDetails>
+             <Typography>
+               <button onClick={sortByASC}>ASC</button>
+               <button onClick={sortByDESC}>DESC</button>
+             </Typography>
+           </ExpansionPanelDetails>
+         </ExpansionPanel>
+       </div>
+
     )
   }
 }

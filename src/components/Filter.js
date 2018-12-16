@@ -18,15 +18,13 @@ function mapStateToProps(state) {
 
 class Filter extends React.Component {
   render() {
-    // console.log('in `Filter`\'s render, this.props is...', this.props)
-
     return (
-      <ExpansionPanel style={{maxWidth:"170px"}} >
+      <ExpansionPanel >
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography style={{marginLeft: "50px"}} >Filter</Typography>
+                <Typography>Filter</Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
-                <Typography style={{paddingLeft: "20px"}}>
+                <Typography>
                   <button onClick={() => {
                       this.props.dispatch({type: "TOGGLE_ACTIVE"});
                     }}>ACTIVE</button>

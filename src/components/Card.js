@@ -5,10 +5,20 @@ export default class Card extends React.Component {
     return (
       <div className="card">
         <ul>
-          <li>title:{this.props.title}</li>
-          <li>comment:{this.props.comment}</li>
-          <li>name:{this.props.name}</li>
+          <li>
+            <span className="bullets">title: &nbsp;</span>
+            {this.props.title}
+          </li>
+          <li>
+            <span className="bullets">comment: &nbsp;</span>
+            {this.props.comment}
+          </li>
+          <li>
+            <span className="bullets">name: &nbsp;</span>
+            {this.props.name}
+          </li>
         </ul>
+        <hr></hr>
       </div>
     )
   }

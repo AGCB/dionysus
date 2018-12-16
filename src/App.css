@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: white;
 }
 
 .App-header {
@@ -19,20 +20,23 @@
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-basis: 1;
 
   font-size: 25px;
 }
 
 header * {
-  background-color: aliceblue;
   flex-basis: 25%;
   flex-grow: 0;
+  font-size: 10px;
+  max-width: 80px;
+  margin-bottom: 10px;
 }
 
 .card {
-  background-color: royalblue;
+  padding-right: 10%;
+  text-align: left;
 }
 
 .searchUserName {
@@ -40,6 +44,36 @@ header * {
   background-color: white;
 }
 
-.card {
-  border: 2px solid aliceblue;
+/* ascending order */
+.test1 {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 70%;
+  margin-left: 10%;
+  border: 10px solid darkcyan;
+  border-radius: 20px;
+}
+/* descending order */
+.test2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column-reverse;
+  max-width: 70%;
+  margin-left: 10%;
+  border: 10px solid darkcyan;
+  border-radius: 20px;
+}
+
+button {
+  text-align: center;
+  padding-right: 45px;
+  margin-right: 200px;
+}
+
+.bullets {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
 }

@@ -57,22 +57,21 @@ function mapStateToProps(state) {
   ...state
 }
 }
+
 class List extends React.Component {
 
   render() {
-    const users = this.props[0].map(x => {
+    const users = this.props.users.map(x => {
       return x.name;
     })
-    console.log('in my render this.props is...', this.props)
     return (
       <div className="card">
-        {this.props[1].map(x => {
+        {this.props.posts.map(x => {
           return (
             <Card key={x.id}
                   title={x.title}
                   comment={x.body}
-                  name={users[x.userId-1]}
-            />
+                  name={users[x.userId-1]}/>
           )
         })}
       </div>

@@ -38,25 +38,27 @@
 # dionysus
  - a small code sample using React/Redux
 
-
-
-
-
-
-
-
-
 ## Branch
 action-dispatching
 
 ## Status
-
 Feature Incomplete.
-- actions are not being fired
-- none of the buttons are functional.
-- no tests written
-- Redux store has data. Unlike before branching off master though, `List` now is connected to the redux store, not just receiving the store's data as a prop.
+- Redux store has data.
+- `List` is connected to the redux store.
+- `Filter` actions are firing.
+  - state is getting modified but incorrectly.
+    - see the comment for `MainReducer`.
+- `Sort` has no onclick behavior
+
+
 ---
+
+
+
+
+
+
+
 
 
 
@@ -87,11 +89,6 @@ There were a few things that got brought up in phone conversations that I need m
 - Redux building from scratch.
   - it felt good when I got the mapping of the json to the cards. If we talk further I'd like to know what the AZ team's opinion is on my strategy there. Was there another way I could have shaped the state object to improve the overall app structure?
 
----
----
----
----
----
 ### ...if more time
 - Next time I need dropdowns from scratch I'd like to try a vanilla react [approach](https://blog.campvanilla.com/reactjs-dropdown-menus-b6e06ae3a8fe)
 
@@ -114,11 +111,9 @@ There were a few things that got brought up in phone conversations that I need m
 ---
 ---
 
-## Current War
-- Dispatching actions....
+## Current Focus
+`Sort` has no onClick behavior
 
-
----
 ---
 ---
 ---

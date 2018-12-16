@@ -1,5 +1,7 @@
 
 import React from 'react'
+import { connect } from 'react-redux';
+
 
 // material UI imports
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
@@ -8,8 +10,16 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 
-export default class Filter extends React.Component {
+function mapStateToProps(state) {
+  return {
+    ...state
+  }
+}
+
+class Filter extends React.Component {
   render() {
+    // console.log('in `Filter`\'s render, this.props is...', this.props)
+
     return (
       <ExpansionPanel style={{maxWidth:"170px"}} >
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
@@ -17,11 +27,17 @@ export default class Filter extends React.Component {
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography style={{paddingLeft: "20px"}}>
-                  <button >ACTIVE</button>
-                  <button >NONACTIVE</button>
+                  <button onClick={() => {
+                      this.props.dispatch({type: "TOGGLE_ACTIVE"});
+                    }}>ACTIVE</button>
+                  <button onClick={() => {
+                      this.props.dispatch({type: "TOGGLE_INACTIVE"});
+                    }}>NONACTIVE</button>
                 </Typography>
               </ExpansionPanelDetails>
             </ExpansionPanel>
     )
   }
 }
+
+export default connect(mapStateToProps)(Filter)

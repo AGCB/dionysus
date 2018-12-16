@@ -45,11 +45,10 @@ action-dispatching
 Feature Incomplete.
 - Redux store has data.
 - `List` is connected to the redux store.
-- `Filter` actions are firing.
-  - state is getting modified but incorrectly.
+- `Sort` is fully functional.
+- `Filter` actions are firing BUT....
+  - state is filtered incorrectly.
     - see the comment for `MainReducer`.
-- `Sort` has no onclick behavior
-
 
 ---
 

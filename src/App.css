@@ -22,7 +22,6 @@ header {
   display: flex;
   justify-content: space-around;
   flex-basis: 1;
-
   font-size: 25px;
 }
 
@@ -51,10 +50,10 @@ header * {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 70%;
-  margin-top:20px;
   margin-left: 10%;
   border: 10px solid darkcyan;
   border-radius: 20px;
+  margin-top:20px;
 }
 /* descending order */
 .test2 {

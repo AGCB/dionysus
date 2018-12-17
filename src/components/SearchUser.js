@@ -8,40 +8,42 @@ function mapStateToProps(state) {
 }
 
 class SearchUser extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        value: ''
-      }
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      value: ''
     }
 
-    handleChange(e) {
-      this.setState({
-        value: e.target.value
-      })
-    }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-    handleSubmit(e) {
-      e.preventDefault();
-      this.props.dispatch({type: "SEARCH_USER_NAME", userInput: this.state.value});
-    }
+  handleChange(e) {
+    this.setState({
+      value: e.target.value
+    })
+  }
 
-    render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input type="text"
-                   name="name"
-                   value={this.state.value}
-                   onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      )
-    }
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.dispatch({type: "SEARCH_USER_NAME", userInput: this.state.value});
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text"
+                 name="name"
+                 value={this.state.value}
+                 onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    )
+  }
 }
 
 export default connect(mapStateToProps)(SearchUser)

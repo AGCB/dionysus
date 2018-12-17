@@ -10,7 +10,6 @@ function mapStateToProps(state) {
 }
 
 class List extends React.Component {
-
   render() {
     const users = this.props.users.map(x => {
       return x.name;

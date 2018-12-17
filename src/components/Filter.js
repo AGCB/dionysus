@@ -1,7 +1,5 @@
-
 import React from 'react'
 import { connect } from 'react-redux';
-
 
 // material UI imports
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
@@ -20,20 +18,20 @@ class Filter extends React.Component {
   render() {
     return (
       <ExpansionPanel >
-              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography>Filter</Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Typography>
-                  <button onClick={() => {
-                      this.props.dispatch({type: "TOGGLE_ACTIVE"});
-                    }}>ACTIVE</button>
-                  <button onClick={() => {
-                      this.props.dispatch({type: "TOGGLE_INACTIVE"});
-                    }}>NONACTIVE</button>
-                </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography>Filter</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography>
+            <button onClick={() => {
+              this.props.dispatch({type: "TOGGLE_ACTIVE"});
+              }}>ACTIVE</button>
+            <button onClick={() => {
+              this.props.dispatch({type: "TOGGLE_INACTIVE"});
+              }}>NONACTIVE</button>
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
     )
   }
 }

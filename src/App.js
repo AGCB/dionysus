@@ -18,6 +18,7 @@ class App extends Component {
     this.state = {
       sortAscending: true
     };
+
     this.sortByASC = this.sortByASC.bind(this);
     this.sortByDESC = this.sortByDESC.bind(this);
   }
@@ -29,6 +30,7 @@ class App extends Component {
       }
     })
   }
+
   sortByDESC() {
     this.setState(prev => {
       return {
@@ -36,6 +38,7 @@ class App extends Component {
       }
     })
   }
+
   render() {
     return (
       <Provider store={store} >
@@ -43,17 +46,19 @@ class App extends Component {
           <header>
             <Filter />
             <Sort
-                  sortByASC={this.sortByASC}
-                  sortByDESC={this.sortByDESC}/>
+              sortByASC={this.sortByASC}
+              sortByDESC={this.sortByDESC}/>
             <SearchUser />
           </header>
-            <List sortascending={this.state.sortAscending}/>
-            <footer style={{textAlign: "right",
-                            marginTop:"20px",
-                            marginRight: "10px"}}>
-              <span>coded with <span role="img"
-                                     aria-label="love">💓 </span>
-                     by alex</span>
+          <List sortascending={this.state.sortAscending}/>
+          <footer style={{textAlign: "right",
+                          marginTop:"20px",
+                          marginRight: "10px"}}>
+            <span>coded with <span role="img"
+                                   aria-label="love">💓
+                             </span>
+                     &nbsp; by alex
+            </span>
             </footer>
         </div>
       </Provider>

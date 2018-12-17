@@ -13,14 +13,6 @@ export const toggleInactive =() => ({
   type: TOGGLE_INACTIVE
 })
 
-// sort actions
-export const sortAscending = () => ({
-  type: SORT_ASCENDING
-})
-export const sortDescending = () => ({
-  type: SORT_DESCENDING
-})
-
 // search userName action
 export const searchUserName = userInput => ({
   type: SEARCH_USER_NAME,

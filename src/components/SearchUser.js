@@ -36,10 +36,10 @@ class SearchUser extends React.Component {
              onSubmit={this.handleSubmit}>
         <label>
           dispatches action only!!
-          <input type="text"
-                 name="name"
-                 value={this.state.value}
-                 onChange={this.handleChange} />
+        <input type="text"
+               name="name"
+               value={this.state.value}
+               onChange={this.handleChange} />
         </label>
         <input type="submit" value=" Don't Use" />
       </form>

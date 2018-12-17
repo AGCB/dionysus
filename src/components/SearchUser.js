@@ -32,7 +32,8 @@ class SearchUser extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form  style={{marginRight: "20px"}}
+             onSubmit={this.handleSubmit}>
         <label>
           dispatches action only!!
           <input type="text"

@@ -4,8 +4,15 @@ import { connect } from 'react-redux';
 import Card from './Card';
 
 function mapStateToProps(state) {
+
   return {
-  ...state
+  ...state,
+  posts: (state.visibilityFilter === "ACTIVE")?
+         state.posts.filter(x => {
+           return x.active;
+         }) : state.posts.filter(x => {
+           return !x.active;
+         })
   }
 }
 

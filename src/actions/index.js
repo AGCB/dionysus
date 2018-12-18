@@ -7,10 +7,12 @@ import { TOGGLE_ACTIVE,
 
 // filter actions
 export const toggleActive = () => ({
-  type: TOGGLE_ACTIVE
+  type: TOGGLE_ACTIVE,
+  visibilityFilter: "ACTIVE"
 })
 export const toggleInactive =() => ({
   type: TOGGLE_INACTIVE
+  visibilityFilter: "INACTIVE"
 })
 
 // search userName action

@@ -24,10 +24,10 @@ class Filter extends React.Component {
         <ExpansionPanelDetails>
           <Typography>
             <button onClick={() => {
-              this.props.dispatch({type: "TOGGLE_ACTIVE"});
+              this.props.dispatch({type: "TOGGLE_ACTIVE", visibilityFilter: "ACTIVE"});
               }}>ACTIVE</button>
             <button onClick={() => {
-              this.props.dispatch({type: "TOGGLE_INACTIVE"});
+              this.props.dispatch({type: "TOGGLE_INACTIVE", visibilityFilter: "INACTIVE"});
               }}>NONACTIVE</button>
           </Typography>
         </ExpansionPanelDetails>
